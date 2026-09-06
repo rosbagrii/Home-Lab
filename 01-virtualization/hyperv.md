@@ -7,17 +7,18 @@ Dieses Dokument beschreibt die Konfiguration und Rolle der Hyper-V-Umgebung. Im 
 Auf diesem Host laufen die virtuellen Maschinen, die typische Endgeräte und Netzwerkknoten eines Firmenstandorts abbilden: 
 
 * **Linux-Router & DHCP-Relay:** Steuert den Netzwerkverkehr der simulierten Büro-Clients und leitet DHCP-Anfragen segmentübergreifend weiter.
-* **Domain Client:** Ein emulierter Mitarbeiter-Arbeitsplatz (Windows/Linux), der als Mitglied fest in die Active-Directory-Domäne integriert ist.
+* **Domain Client:** Ein emulierter Mitarbeiter-Arbeitsplatz (Windows), der als Mitglied fest in die Active-Directory-Domäne integriert ist.
 * **Proxmox VE (Nested Virtualization):** Eine virtuelle Instanz von Proxmox, die innerhalb von Hyper-V läuft. Sie simuliert den logisch getrennten, physischen Serverraum des Unternehmens.
 
 ### 📊 Ressourceneinteilung (Sizing)
 *Hinweis: Die VMs nutzen dynamische VHDX-Festplatten im isolierten "Skynet-Netz".*
 
 | VM / Rolle | Betriebssystem | vCPU | RAM | Speicher |
-
+| :--- | :--- | :---: | :---: | :---: |
 | **Client** (Mitarbeiter-PC) | Windows 11 | 2 | 8 GB | 60 GB |
 | **DHCP-Relay** (Linux-Router) | Linux (Ubuntu/Debian) | 1 | 2 GB | 10 GB |
-| **Proxmox** (Serverraum-Host) | Proxmox VE | 4 | 16 GB | 60 GB |
+| **Proxmox** (Serverraum-Host) | Proxmox VE | 4 | 16 GB | 200 GB |
+
 
 ### ⚙️ Technische Kernkonfigurationen
 

@@ -13,7 +13,7 @@ Im virtuellen Serverraum laufen die zentralen Enterprise-Dienste und Server-Infr
 ### 📊 Ressourceneinteilung (Sizing)
 
 | Server / VM | Betriebssystem | vCPU | RAM | Speicher |
-
+| :--- | :--- | :---: | :---: | :---: |
 | **Domain Controller (DC)** | Windows Server 2025 | 2 | 8 GB | 60 GB |
 | **Webserver** | Linux (Ubuntu/Debian) | 1 | 1 GB | 15 GB |
 | **MySQL-Database** | Linux (Ubuntu/Debian) | 1 | 1 GB | 15 GB |
